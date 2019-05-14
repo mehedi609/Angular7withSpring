@@ -1,0 +1,12 @@
+<h2 class="mt-3">Login</h2>
+
+<div class="container">
+  <div *ngIf="invalidLogin" class="alert alert-danger">{{errorMessage}}</div>
+
+  <div>
+    Username: <input type="text" name="username" [(ngModel)]="username" class="form-control">
+    Password: <input type="password" name="password" [(ngModel)]="password" class="form-control">
+
+    <button (click)="handleLogin()" class="btn btn-success mt-3">Login</button>
+  </div>
+</div>

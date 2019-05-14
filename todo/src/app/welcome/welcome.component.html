@@ -1,0 +1,26 @@
+<div class="container mt-3">
+    <p class="alert-danger alert" *ngIf="errormsgFromWelcomeDataSer">{{errormsgFromWelcomeDataSer}}</p>
+</div>
+
+<h2 class="mt-3">Welcome!</h2>
+
+<div class="container">
+    <div>Welcome {{name}}</div>
+    <div>
+        You can manage your todos. <a routerLink="/todos">Click Here</a>
+    </div>
+</div>
+
+<!--<div class="container">
+    Click here to get the customized welcome message <br>
+    <button class="btn btn-primary" (click)="getWelcomeMessage()">Welcome-message</button>
+</div>-->
+
+<div class="container">
+    Click here to get the customized welcome message <br>
+    <button class="btn btn-primary" (click)="getWelcomeMessageWithVar()">Welcome-message</button>
+</div>
+
+<div class="container" *ngIf="messageFromWelcomeDataService">
+    <h3>Your customized welcome message => {{messageFromWelcomeDataService}}</h3>
+</div>
